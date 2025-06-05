@@ -93,6 +93,7 @@ body {
   background-color: #00c851;
   text-decoration: none;
   border: none;
+  cursor: pointer;
 }
 
 .btn_whatsapp:hover {
@@ -507,6 +508,7 @@ iframe {
     width: 31.33%;
     height: 234px;
   }
+
   /* =============final========== */
   #final h2 {
     font-size: 1.2rem;
@@ -522,7 +524,10 @@ iframe {
   .pagamentos,
   .map {
     width: 32.33%;
-    height: 200px;
+  }
+
+  .pagamentos h2 {
+    font-size: 17px !important;
   }
 
   .localizacao {
