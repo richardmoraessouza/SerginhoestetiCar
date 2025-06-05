@@ -53,7 +53,7 @@ body {
 #cor_fundo {
   background-image: linear-gradient(to top, darkgreen, rgba(0, 0, 0, 0.925));
   padding: 10px;
-  height: 80vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -486,6 +486,9 @@ iframe {
   }
 }
 @media (min-width: 768px) {
+  #cor_fundo {
+    height: 100vh;
+  }
   /* =============home============== */
   #home h1 {
     font-size: clamp(1rem, 4vw, 3rem);
