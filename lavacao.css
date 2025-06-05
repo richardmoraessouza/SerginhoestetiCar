@@ -51,7 +51,7 @@ body {
 }
 /* ==============logo do site=========== */
 #cor_fundo {
-  background-image: linear-gradient(to top, darkgreen, rgba(0, 0, 0, 0.925));
+  background: linear-gradient(to right, #1f1f1f, #383838);
   padding: 10px;
   height: 70vh;
   display: flex;
@@ -198,20 +198,26 @@ body {
 }
 
 /* ================sobre nós e agenda======== */
-#agenda_sobre-nos {
+#agenda_sobre-nos h2 {
+  text-align: center;
+}
+.container-infor {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
   width: 100%;
   max-width: 1200px;
+  text-align: center;
 }
 
 .mover-bloco {
   transition: transform 0.3s ease;
 }
+
 .mover-bloco:hover {
   transform: translateY(-4px);
 }
+
 .agenda,
 .sobre-nos {
   width: 100%;
@@ -228,6 +234,7 @@ body {
 .sobre-nos p {
   line-height: 1.6;
 }
+
 .agenda h3,
 .sobre-nos h3 {
   font-size: clamp(1rem, 4vw, 1.6rem);
@@ -243,6 +250,7 @@ body {
   color: #003f1f;
   text-align: center;
 }
+
 .agendamento {
   font-weight: bold;
   color: #006633;
@@ -375,12 +383,15 @@ footer abbr {
   padding: 5px;
 }
 
-#final a,
-#final p {
+#final a {
   font-size: clamp(0.7rem, 8vw, 1rem);
   padding: 5px 0px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.897);
+}
+#final p {
+  font-size: clamp(0.7rem, 8vw, 1rem);
+  padding: 5px 0px;
 }
 #final h2 {
   padding: 5px 0px;
@@ -422,14 +433,17 @@ iframe {
 }
 
 .final {
-  background-image: linear-gradient(to right, rgb(1, 70, 1), rgb(84, 255, 84));
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 70, 1),
+    rgba(84, 255, 84, 0.87)
+  );
   font-size: clamp(1.2rem, 1.2vw, 2rem);
   padding: 7px;
   text-align: center;
   width: 100%;
-  color: rgba(0, 0, 0, 0.705);
-  font-style: italic;
-  font-weight: bold;
+  color: black;
+  /* font-weight: bold; */
 }
 
 /* =============media============ */
@@ -499,7 +513,7 @@ iframe {
   }
 
   /* =======agenda===== */
-  #agenda_sobre-nos {
+  .container-infor {
     grid-template-columns: 1fr 1fr;
   }
   /* =========avaliações======== */
@@ -579,6 +593,7 @@ iframe {
     background-image: none;
     border-top: 1px solid #333;
     padding: 15px !important;
+    color: white;
   }
 
   #final {
