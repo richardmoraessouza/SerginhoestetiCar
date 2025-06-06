@@ -23,32 +23,19 @@ body {
   0% {
     opacity: 0;
     transform: translateX(-600px);
-    filter: blur(4px);
   }
   100% {
     transform: translateX(0);
     opacity: 1;
-    filter: blur(0);
   }
 }
 .animated {
-  animation: mover 0.8s ease-out forwards;
+  animation: mover 1s ease-out forwards;
   opacity: 0;
 }
 
 .scroll-reveal {
   opacity: 0;
-}
-
-@keyframes animacao {
-  0% {
-    opacity: 0;
-    transform: translateY(-400px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @keyframes logoFadeZoom {
@@ -71,9 +58,6 @@ body {
   animation: mover 2.7s infinite;
 }
 
-.animacao {
-  animation: animacao 2s ease forwards;
-}
 /* ==============logo do site=========== */
 #cor_fundo {
   /* background-image: linear-gradient(to top, darkgreen, rgba(0, 0, 0, 0.925)); */
