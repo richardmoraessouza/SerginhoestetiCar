@@ -197,7 +197,6 @@ function mostrarMais() {
     const MostraAvalicoes = document.createElement("div");
     MostraAvalicoes.classList.add("avaliacao");
     MostraAvalicoes.innerHTML = `
-    <div class="scroll-reveal">
       <div class="pessoa">
         <h3>${avaliacao.nome}</h3>
       </div>
@@ -205,8 +204,9 @@ function mostrarMais() {
         avaliacao.estrelas
       )}</p>
       <p class="pessoa_avaliacao">${avaliacao.texto}</p>
-    </div>
+  
     `;
+    avaliacoes.classList.add("scroll-reveal");
     avaliacoes.appendChild(MostraAvalicoes);
     indiceAtual++;
   }
