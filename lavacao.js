@@ -197,6 +197,7 @@ function mostrarMais() {
     const MostraAvalicoes = document.createElement("div");
     MostraAvalicoes.classList.add("avaliacao");
     MostraAvalicoes.innerHTML = `
+    <div class="scroll-reveal">
       <div class="pessoa">
         <h3>${avaliacao.nome}</h3>
       </div>
@@ -204,9 +205,8 @@ function mostrarMais() {
         avaliacao.estrelas
       )}</p>
       <p class="pessoa_avaliacao">${avaliacao.texto}</p>
-  
+    </div>
     `;
-    avaliacoes.classList.add("scroll-reveal");
     avaliacoes.appendChild(MostraAvalicoes);
     indiceAtual++;
   }
@@ -245,3 +245,16 @@ function revelarAoScroll() {
 
 window.addEventListener("scroll", revelarAoScroll);
 window.addEventListener("load", revelarAoScroll);
+ScrollReveal().reveal(".scroll-reveal:not(.mover-bloco)", {
+  distance: "50px",
+  duration: 800,
+  origin: "bottom",
+  easing: "ease-out",
+});
+
+ScrollReveal().reveal(".mover-bloco", {
+  distance: "60px",
+  duration: 1000,
+  origin: "left",
+  easing: "ease-out",
+});
