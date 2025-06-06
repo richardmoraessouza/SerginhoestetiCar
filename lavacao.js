@@ -245,16 +245,3 @@ function revelarAoScroll() {
 
 window.addEventListener("scroll", revelarAoScroll);
 window.addEventListener("load", revelarAoScroll);
-ScrollReveal().reveal(".scroll-reveal:not(.mover-bloco)", {
-  distance: "50px",
-  duration: 800,
-  origin: "bottom",
-  easing: "ease-out",
-});
-
-ScrollReveal().reveal(".mover-bloco", {
-  distance: "60px",
-  duration: 1000,
-  origin: "left",
-  easing: "ease-out",
-});

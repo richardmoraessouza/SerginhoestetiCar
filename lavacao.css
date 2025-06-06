@@ -51,6 +51,22 @@ body {
   }
 }
 
+@keyframes logoFadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo-animada {
+  animation: logoFadeZoom 1s ease-out forwards;
+  opacity: 0; /* Inicia invisível */
+}
+
 .mover {
   animation: mover 2.7s infinite;
 }
