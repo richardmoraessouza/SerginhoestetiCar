@@ -18,19 +18,19 @@ const novasAvaliacoes = [
     nome: "Lucas Lima",
     estrelas: 5,
     texto:
-      "Recomendo para todos que querem deixar o carro com aparência de novo. O polimento técnico deu um brilho incrível na pintura, e o atendimento foi muito cordial e prestativo.",
+      "Recomendo para todos que querem deixar o carro com aparência de novo. O polimento técnico deu um brilho incrível na pintura.",
   },
   {
     nome: "Fernanda Souza",
     estrelas: 5,
     texto:
-      "Fiquei impressionada com a qualidade do serviço. O carro ficou com um cheiro agradável e a limpeza interna foi feita com muita atenção aos detalhes. Certamente voltarei mais vezes.",
+      "Fiquei impressionada com a qualidade do serviço. O carro ficou com um cheiro agradável e a limpeza interna foi feita com muita atenção aos detalhes.",
   },
   {
     nome: "João Pedro",
     estrelas: 5,
     texto:
-      "O trabalho realizado superou minhas expectativas. Profissionais dedicados, que tratam o veículo com muito cuidado e utilizam produtos de alta qualidade. Serviço impecável!",
+      "O trabalho realizado superou minhas expectativas. Profissionais dedicados, que tratam o veículo com muito cuidado e utilizam produtos de alta qualidade.",
   },
   {
     nome: "Mariana Ribeiro",
@@ -42,13 +42,13 @@ const novasAvaliacoes = [
     nome: "Gustavo Almeida",
     estrelas: 5,
     texto:
-      "O processo de descontaminação da pintura fez uma grande diferença. O carro ficou muito mais brilhante e protegido. Parabéns pela dedicação e atenção aos detalhes.",
+      "O processo de descontaminação da pintura fez uma grande diferença. O carro ficou muito mais brilhante e protegido.",
   },
   {
     nome: "Camila Rocha",
     estrelas: 5,
     texto:
-      "O ambiente é agradável e a equipe super profissional. Meu carro nunca esteve tão bem cuidado. A higienização interna eliminou odores que estavam incomodando há meses.",
+      "Meu carro nunca esteve tão bem cuidado. A higienização interna eliminou odores que estavam incomodando há meses.",
   },
   {
     nome: "Rafael Barbosa",

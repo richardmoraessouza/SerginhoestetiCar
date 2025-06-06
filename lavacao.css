@@ -304,6 +304,7 @@ body {
   align-items: center;
   margin-bottom: 30px;
 }
+
 .container-avaliacoes {
   width: 100%;
   display: flex;
@@ -329,6 +330,7 @@ body {
   gap: 10px;
   position: relative;
 }
+
 .pessoa::before {
   content: "";
   width: 50px;
@@ -343,6 +345,7 @@ body {
   font-size: clamp(0.6rem, 4vw, 1rem);
   color: gold;
 }
+
 .pessoa_avaliacao {
   padding: 10px 0px;
   font-size: clamp(0.8rem, 3vw, 1rem);
