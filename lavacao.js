@@ -187,6 +187,14 @@ let indiceAtual = 0;
 const Vez_5 = 5;
 
 function mostrarMais() {
+  if (btn_ver_mais.textContent === "Fechar") {
+    avaliacoes.innerHTML = ""; // Limpa tudo
+    indiceAtual = 0;
+    btn_ver_mais.textContent = "Ver mais";
+    mostrarMais();
+    return;
+  }
+
   for (let i = 0; i < Vez_5; i++) {
     if (indiceAtual >= novasAvaliacoes.length) {
       btn_ver_mais.textContent = "Fechar";
@@ -194,18 +202,18 @@ function mostrarMais() {
     }
 
     const avaliacao = novasAvaliacoes[indiceAtual];
-    const MostraAvalicoes = document.createElement("div");
+    const MostraAvalicoes = document.createElement("article");
     MostraAvalicoes.classList.add("avaliacao");
     MostraAvalicoes.innerHTML = `
-    <div class="scroll-reveal">
-      <div class="pessoa">
-        <h3>${avaliacao.nome}</h3>
+      <div class="scroll-reveal">
+        <div class="pessoa">
+          <h3>${avaliacao.nome}</h3>
+        </div>
+        <p class="estrelas">${'<i class="fas fa-star"></i>'.repeat(
+          avaliacao.estrelas
+        )}</p>
+        <p class="pessoa_avaliacao">${avaliacao.texto}</p>
       </div>
-      <p class="estrelas">${'<i class="fas fa-star"></i> '.repeat(
-        avaliacao.estrelas
-      )}</p>
-      <p class="pessoa_avaliacao">${avaliacao.texto}</p>
-    </div>
     `;
     avaliacoes.appendChild(MostraAvalicoes);
     indiceAtual++;
@@ -215,20 +223,47 @@ function mostrarMais() {
 mostrarMais();
 btn_ver_mais.addEventListener("click", mostrarMais);
 // =================carrossel===========
-const img = document.querySelector("#img");
-const imgs = document.querySelectorAll("img");
-let idx = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector(".carousel-btn.next");
+  const prevButton = document.querySelector(".carousel-btn.prev");
 
-function carrossel() {
-  idx++;
-  if (idx >= imgs.length - 1) {
-    idx = 0;
+  let slideWidth = slides[0].getBoundingClientRect().width;
+
+  let currentIndex = 0;
+
+  window.addEventListener("resize", () => {
+    slideWidth = slides[0].getBoundingClientRect().width;
+    moveToSlide(currentIndex);
+  });
+
+  function moveToSlide(index) {
+    if (index < 0) index = 0;
+    if (index > slides.length - visibleSlides())
+      index = slides.length - visibleSlides();
+
+    currentIndex = index;
+    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
   }
-  img.style.transform = `translateX(${-idx * 600}px)`;
-  img.style.transition = "transform 1s ease-in-out";
-}
 
-setInterval(carrossel, 3000);
+  function visibleSlides() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+  }
+
+  nextButton.addEventListener("click", () => {
+    moveToSlide(currentIndex + 1);
+  });
+
+  prevButton.addEventListener("click", () => {
+    moveToSlide(currentIndex - 1);
+  });
+
+  moveToSlide(0);
+});
+
 // ==========mostrar-itens===========
 function revelarAoScroll() {
   const elementos = document.querySelectorAll(".scroll-reveal");

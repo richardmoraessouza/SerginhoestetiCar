@@ -30,7 +30,7 @@ body {
   }
 }
 .animated {
-  animation: mover 1s ease-out forwards;
+  animation: mover 0.8s ease-out forwards;
   opacity: 0;
 }
 
@@ -51,7 +51,7 @@ body {
 
 .logo-animada {
   animation: logoFadeZoom 1s ease-out forwards;
-  opacity: 0; /* Inicia invisível */
+  opacity: 0;
 }
 
 .mover {
@@ -134,10 +134,6 @@ body {
 #servicos {
   width: 100%;
   max-width: 1200px;
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap; */
   text-align: center;
   margin: 0 auto;
   padding: 60px 20px;
@@ -269,32 +265,65 @@ body {
 }
 /* ================carrossel============ */
 #carros-finalizados {
-  height: auto;
-  width: 100%;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
+  text-align: center;
 }
 
-.carrossel {
-  box-shadow: var(--border-radius);
+.carousel {
+  position: relative;
+  margin: 2rem auto;
+  max-width: 900px;
   overflow: hidden;
-  height: 350px;
-  width: 600px;
-  border-radius: var(--border-radius);
 }
 
-.container_img {
+.carousel-track-container {
+  overflow: hidden;
+}
+
+.carousel-track {
   display: flex;
-  transition: transform 0.5 ease-in-out;
-  transform: translate(0);
+  transition: transform 0.5s ease-in-out;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.container_img img {
-  object-fit: cover;
-  height: 500px;
-  width: 600px;
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.carousel-slide img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* ============avalições========= */
@@ -348,7 +377,7 @@ body {
 
 .pessoa_avaliacao {
   padding: 10px 0px;
-  font-size: clamp(0.8rem, 3vw, 1rem);
+  font-size: clamp(0.6rem, 2.7vw, 1rem);
 }
 
 .pessoa h3 {
@@ -397,19 +426,21 @@ footer abbr {
 }
 
 #final a {
-  font-size: clamp(0.7rem, 8vw, 1rem);
+  font-size: clamp(0.7rem, 8.5vw, 1rem);
   padding: 5px 0px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.897);
 }
 
 #final p {
-  font-size: clamp(0.7rem, 8vw, 1rem);
+  font-size: clamp(0.7rem, 8.5vw, 1rem);
   padding: 5px 0px;
 }
+
 #final h2 {
   padding: 5px 0px;
 }
+
 #final li {
   padding: 3px;
   list-style: none;
@@ -460,8 +491,6 @@ iframe {
 }
 
 /* =============media============ */
-
-/* arruma essa merda de botão de zap */
 @media (min-width: 300px) {
   #final {
     display: flex;
@@ -512,6 +541,7 @@ iframe {
     font-size: 16px;
   }
 }
+
 @media (min-width: 768px) {
   #cor_fundo {
     height: 100vh;
@@ -524,7 +554,10 @@ iframe {
   #home p {
     font-size: clamp(1rem, 2.2vw, 2rem);
   }
-
+  /* ========carrossel======= */
+  .carousel-slide {
+    min-width: 50%;
+  }
   /* =======agenda===== */
   .container-infor {
     grid-template-columns: 1fr 1fr;
@@ -548,7 +581,7 @@ iframe {
   #final p,
   #final a {
     padding: 6px;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
 
   .contatos,
@@ -588,6 +621,11 @@ iframe {
 }
 
 @media (min-width: 1026px) {
+  /* ======carrossel======= */
+  .carousel-slide {
+    min-width: 33.3333%;
+  }
+  /* ======fina=== */
   .localizacao,
   iframe {
     width: 100%;
