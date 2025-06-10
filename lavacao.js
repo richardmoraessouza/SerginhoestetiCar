@@ -188,7 +188,7 @@ const Vez_5 = 5;
 
 function mostrarMais() {
   if (btn_ver_mais.textContent === "Fechar") {
-    avaliacoes.innerHTML = ""; // Limpa tudo
+    avaliacoes.innerHTML = "";
     indiceAtual = 0;
     btn_ver_mais.textContent = "Ver mais";
     mostrarMais();
@@ -205,7 +205,7 @@ function mostrarMais() {
     const MostraAvalicoes = document.createElement("article");
     MostraAvalicoes.classList.add("avaliacao");
     MostraAvalicoes.innerHTML = `
-      <div class="scroll-reveal">
+      
         <div class="pessoa">
           <h3>${avaliacao.nome}</h3>
         </div>
@@ -213,7 +213,7 @@ function mostrarMais() {
           avaliacao.estrelas
         )}</p>
         <p class="pessoa_avaliacao">${avaliacao.texto}</p>
-      </div>
+     
     `;
     avaliacoes.appendChild(MostraAvalicoes);
     indiceAtual++;
@@ -261,6 +261,18 @@ document.addEventListener("DOMContentLoaded", () => {
     moveToSlide(currentIndex - 1);
   });
 
+  const focoImg = document.querySelectorAll(".carousel-slide");
+  const img_selecionado = document.querySelector(".focarImg");
+  const sair_model = document.querySelector(".sair-model");
+  sair_model.addEventListener("click", () => {
+    img_selecionado.classList.remove("ativo");
+  });
+
+  focoImg.forEach((img) => {
+    img.addEventListener("click", () => {
+      img_selecionado.classList.add("ativo");
+    });
+  });
   moveToSlide(0);
 });
 
@@ -280,3 +292,5 @@ function revelarAoScroll() {
 
 window.addEventListener("scroll", revelarAoScroll);
 window.addEventListener("load", revelarAoScroll);
+
+// ========model=============

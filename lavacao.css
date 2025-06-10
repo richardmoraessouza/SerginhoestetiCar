@@ -15,6 +15,7 @@ body {
   color: black;
   background: white;
   font-family: "Montserrat", sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   height: 100dvh;
 }
 
@@ -326,6 +327,40 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.focarImg {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100dvh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.focarImg.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.focarImg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sair-model {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 /* ============avalições========= */
 #avaliacoes {
   display: flex;
