@@ -188,24 +188,15 @@ const Vez_5 = 5;
 
 function mostrarMais() {
   if (btn_ver_mais.textContent === "Fechar") {
-    avaliacoes.innerHTML = ""; // Limpa tudo
+    avaliacoes.innerHTML = "";
     indiceAtual = 0;
     btn_ver_mais.textContent = "Ver mais";
-    mostrarMais();
-    return;
-  }
 
-  for (let i = 0; i < Vez_5; i++) {
-    if (indiceAtual >= novasAvaliacoes.length) {
-      btn_ver_mais.textContent = "Fechar";
-      return;
-    }
-
-    const avaliacao = novasAvaliacoes[indiceAtual];
-    const MostraAvalicoes = document.createElement("article");
-    MostraAvalicoes.classList.add("avaliacao");
-    MostraAvalicoes.innerHTML = `
-      <div class="scroll-reveal">
+    for (let i = 0; i < Vez_5 && i < novasAvaliacoes.length; i++) {
+      const avaliacao = novasAvaliacoes[indiceAtual];
+      const MostraAvalicoes = document.createElement("article");
+      MostraAvalicoes.classList.add("avaliacao");
+      MostraAvalicoes.innerHTML = `
         <div class="pessoa">
           <h3>${avaliacao.nome}</h3>
         </div>
@@ -213,10 +204,33 @@ function mostrarMais() {
           avaliacao.estrelas
         )}</p>
         <p class="pessoa_avaliacao">${avaliacao.texto}</p>
+      `;
+      avaliacoes.appendChild(MostraAvalicoes);
+      indiceAtual++;
+    }
+
+    return;
+  }
+
+  for (let i = 0; i < Vez_5 && indiceAtual < novasAvaliacoes.length; i++) {
+    const avaliacao = novasAvaliacoes[indiceAtual];
+    const MostraAvalicoes = document.createElement("article");
+    MostraAvalicoes.classList.add("avaliacao");
+    MostraAvalicoes.innerHTML = `
+      <div class="pessoa">
+        <h3>${avaliacao.nome}</h3>
       </div>
+      <p class="estrelas">${'<i class="fas fa-star"></i>'.repeat(
+        avaliacao.estrelas
+      )}</p>
+      <p class="pessoa_avaliacao">${avaliacao.texto}</p>
     `;
     avaliacoes.appendChild(MostraAvalicoes);
     indiceAtual++;
+  }
+
+  if (indiceAtual >= novasAvaliacoes.length) {
+    btn_ver_mais.textContent = "Fechar";
   }
 }
 
@@ -230,13 +244,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevButton = document.querySelector(".carousel-btn.prev");
 
   let slideWidth = slides[0].getBoundingClientRect().width;
-
   let currentIndex = 0;
 
-  window.addEventListener("resize", () => {
-    slideWidth = slides[0].getBoundingClientRect().width;
-    moveToSlide(currentIndex);
-  });
+  function visibleSlides() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 768) return 2;
+    return 1;
+  }
 
   function moveToSlide(index) {
     if (index < 0) index = 0;
@@ -247,11 +261,10 @@ document.addEventListener("DOMContentLoaded", () => {
     track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
   }
 
-  function visibleSlides() {
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 768) return 2;
-    return 1;
-  }
+  window.addEventListener("resize", () => {
+    slideWidth = slides[0].getBoundingClientRect().width;
+    moveToSlide(currentIndex);
+  });
 
   nextButton.addEventListener("click", () => {
     moveToSlide(currentIndex + 1);
@@ -262,6 +275,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   moveToSlide(0);
+
+  // ======== Modal das imagens ========
+  const focoImgs = document.querySelectorAll(".carousel-slide img");
+  const modal = document.querySelector(".focarImg");
+  const imagemNoModal = modal.querySelector("img");
+  const botaoFechar = modal.querySelector(".sair-model");
+
+  focoImgs.forEach((img) => {
+    img.addEventListener("click", () => {
+      imagemNoModal.src = img.src;
+      imagemNoModal.alt = img.alt;
+      modal.classList.add("ativo");
+    });
+  });
+
+  botaoFechar.addEventListener("click", () => {
+    modal.classList.remove("ativo");
+  });
 });
 
 // ==========mostrar-itens===========
@@ -280,3 +311,5 @@ function revelarAoScroll() {
 
 window.addEventListener("scroll", revelarAoScroll);
 window.addEventListener("load", revelarAoScroll);
+
+// ========model=============

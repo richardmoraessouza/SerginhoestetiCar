@@ -16,10 +16,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" href="imagens/logo SerginhoEstetiCar.png" type="image/x-icon">
 
   </head>
   <body>
+    <div class="focarImg">
+      <button class="sair-model" aria-label="Fechar">
+        <i class="fas fa-times"></i>
+      </button>
+      <img src="" alt="Carro finalizado 1"/>
+    </div>
     <header id="home">
       <section id="cor_fundo">
         <div class="container_logo">
@@ -141,7 +149,7 @@
               <li><strong>Seg. a Dom.</strong></li>
               <li>07:00 - 12:00</li>
               <li>13:30 - 19:00</li>
-            </ul
+            </ul>
             <p class="agendamento">Atendimento somente com horário marcado</p>
           </div>
       </section>
@@ -153,20 +161,19 @@
 
            <div class="carousel-track-container">
             <ul class="carousel-track">
-              <li class="carousel-slide"><img src="imagens/pngtree-sports-car-silhouette-simple-logo-png-image_3874452.jpg" alt="Carro finalizado 1" /></li>
-              <li class="carousel-slide"><img src="imagens/pngtree-sports-car-silhouette-simple-logo-png-image_3874452.jpg" alt="Carro finalizado 2" /></li>
-              <li class="carousel-slide"><img src="imagens/um-carro-com-a-palavra-auto-na-frente-dele_1272865-11463.jpg" alt="Carro finalizado 3" /></li>
-              <li class="carousel-slide"><img src="imagens/sem perfil.jpg" alt="Carro finalizado 4" /></li>
-              <!-- Adicione mais itens conforme necessário -->
+              <li class="carousel-slide"><img src="imagens/1000031262.jpg" alt="Carro finalizado 1" id="teste"/></li>
+              <li class="carousel-slide"><img src="imagens/1000031259.jpg" alt="Carro finalizado 2" /></li>
+              <li class="carousel-slide"><img src="imagens/1000031261.jpg" alt="Carro finalizado 3" /></li>
+              <li class="carousel-slide"><img src="imagens/1000031250.jpg" alt="Carro finalizado 4" /></li>
             </ul>
            </div>
 
-    <button class="carousel-btn next" aria-label="Próximo slide">&#10095;</button>
+           <button class="carousel-btn next" aria-label="Próximo slide">&#10095;</button>
       </section>
-
+      <!-- =====================valiações================ -->
       <section id="avaliacoes">
         <h2><i class="fas fa-comment-dots"></i> avaliações dos clientes</h2>
-        <div class="container-avaliacoes ">
+        <div class="container-avaliacoes scroll-reveal">
         </div>
         <button class="btn_ver_mais" onclick="mostrarMais()">Ver mais</button>
       </section>
