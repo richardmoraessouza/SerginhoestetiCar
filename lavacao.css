@@ -131,6 +131,29 @@ body {
   font-size: clamp(1.5rem, 4vw, 2rem);
   color: #014601 !important;
 }
+
+.float_zap {
+  position: fixed;
+  background-color: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  z-index: 9999;
+  right: 30px;
+  bottom: 20px;
+  cursor: pointer;
+}
+.float_zap a {
+  color: white;
+}
+.float_zap:hover {
+  background-color: #128c7e;
+}
 /* ==================serviços======= */
 #servicos {
   width: 100%;
@@ -342,14 +365,16 @@ body {
   visibility: visible;
 }
 
-.focarImg img {
+.focarImg #model_img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  height: 90%;
+  height: 70%;
+  object-fit: cover;
 }
+
 .sair-model {
   border-radius: 50%;
   width: 50px;
