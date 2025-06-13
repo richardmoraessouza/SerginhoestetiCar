@@ -10,6 +10,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 body {
   color: black;
@@ -128,8 +130,31 @@ body {
 
 #principal h2 {
   margin: 50px 0px !important;
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(1.1rem, 4vw, 2rem);
   color: #014601 !important;
+}
+
+.float_zap {
+  position: fixed;
+  background-color: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  z-index: 9999;
+  right: 30px;
+  bottom: 20px;
+  cursor: pointer;
+}
+.float_zap a {
+  color: white;
+}
+.float_zap:hover {
+  background-color: #128c7e;
 }
 /* ==================serviços======= */
 #servicos {
@@ -137,11 +162,11 @@ body {
   max-width: 1200px;
   text-align: center;
   margin: 0 auto;
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
 }
 
 #servicos h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 40px;
   display: flex;
   align-items: center;
@@ -169,13 +194,13 @@ body {
 }
 
 .icone-servico {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
   color: #00aa44;
   margin-bottom: 15px;
 }
 
 .card-servico h3 {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 1.5vw, 2rem);
   margin-bottom: 10px;
   color: #003f1f;
 }
@@ -330,7 +355,7 @@ body {
 .focarImg {
   background: rgba(0, 0, 0, 0.8);
   height: 100dvh;
-  width: 100vw;
+  width: 100dvw;
   position: fixed;
   z-index: 1000;
   opacity: 0;
@@ -342,14 +367,16 @@ body {
   visibility: visible;
 }
 
-.focarImg img {
+.focarImg #model_img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  height: 90%;
+  width: 90%;
+  height: 70%;
+  object-fit: cover;
 }
+
 .sair-model {
   border-radius: 50%;
   width: 50px;
@@ -558,6 +585,9 @@ iframe {
   #home p {
     font-size: clamp(0.4rem, 3vw, 10rem);
   }
+  #principal h2 {
+    font-size: 0.8rem;
+  }
 
   .btn_whatsapp {
     font-size: 10px;
@@ -612,7 +642,7 @@ iframe {
 
   /* =============final========== */
   #final h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   #final p,
