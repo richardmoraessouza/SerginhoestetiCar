@@ -160,11 +160,11 @@ body {
   max-width: 1200px;
   text-align: center;
   margin: 0 auto;
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
 }
 
 #servicos h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 40px;
   display: flex;
   align-items: center;
@@ -192,13 +192,13 @@ body {
 }
 
 .icone-servico {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
   color: #00aa44;
   margin-bottom: 15px;
 }
 
 .card-servico h3 {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 1.5vw, 2rem);
   margin-bottom: 10px;
   color: #003f1f;
 }
@@ -353,7 +353,7 @@ body {
 .focarImg {
   background: rgba(0, 0, 0, 0.8);
   height: 100dvh;
-  width: 100vw;
+  width: 100dvw;
   position: fixed;
   z-index: 1000;
   opacity: 0;
@@ -370,8 +370,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
-  height: 90%;
+  width: 90%;
+  height: 70%;
   object-fit: cover;
 }
 
