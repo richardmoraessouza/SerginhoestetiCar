@@ -184,58 +184,46 @@ const novasAvaliacoes = [
   },
 ];
 let indiceAtual = 0;
-const Vez_5 = 5;
-
-function mostrarMais() {
-  if (btn_ver_mais.textContent === "Fechar") {
-    avaliacoes.innerHTML = "";
-    indiceAtual = 0;
-    btn_ver_mais.textContent = "Ver mais";
-
-    for (let i = 0; i < Vez_5 && i < novasAvaliacoes.length; i++) {
-      const avaliacao = novasAvaliacoes[indiceAtual];
-      const MostraAvalicoes = document.createElement("article");
-      MostraAvalicoes.classList.add("avaliacao");
-      MostraAvalicoes.innerHTML = `
-        <div class="pessoa">
-          <h3>${avaliacao.nome}</h3>
+let quantidade_comentarios = 5;
+function mostrarComentarios() {
+  let proximo = indiceAtual + quantidade_comentarios;
+  let comentarios_mostrar = novasAvaliacoes.slice(indiceAtual, proximo);
+  comentarios_mostrar.forEach((comentario) => {
+    const mostrarAvalicoes = document.createElement("article");
+    mostrarAvalicoes.classList.add("avaliacao");
+    mostrarAvalicoes.innerHTML = `
+    <div class="pessoa">
+          <h3>${comentario.nome}</h3>
         </div>
         <p class="estrelas">${'<i class="fas fa-star"></i>'.repeat(
-          avaliacao.estrelas
+          comentario.estrelas
         )}</p>
-        <p class="pessoa_avaliacao">${avaliacao.texto}</p>
-      `;
-      avaliacoes.appendChild(MostraAvalicoes);
-      indiceAtual++;
-    }
-
-    return;
-  }
-
-  for (let i = 0; i < Vez_5 && indiceAtual < novasAvaliacoes.length; i++) {
-    const avaliacao = novasAvaliacoes[indiceAtual];
-    const MostraAvalicoes = document.createElement("article");
-    MostraAvalicoes.classList.add("avaliacao");
-    MostraAvalicoes.innerHTML = `
-      <div class="pessoa">
-        <h3>${avaliacao.nome}</h3>
-      </div>
-      <p class="estrelas">${'<i class="fas fa-star"></i>'.repeat(
-        avaliacao.estrelas
-      )}</p>
-      <p class="pessoa_avaliacao">${avaliacao.texto}</p>
+        <p class="pessoa_avaliacao">${comentario.texto}</p>
     `;
-    avaliacoes.appendChild(MostraAvalicoes);
+    avaliacoes.appendChild(mostrarAvalicoes);
     indiceAtual++;
-  }
-
-  if (indiceAtual >= novasAvaliacoes.length) {
-    btn_ver_mais.textContent = "Fechar";
-  }
+    if (indiceAtual >= novasAvaliacoes.length) {
+      btn_ver_mais.textContent = "Fechar";
+    }
+  });
 }
 
-mostrarMais();
-btn_ver_mais.addEventListener("click", mostrarMais);
+function resetar() {
+  avaliacoes.innerHTML = "";
+  indiceAtual = 0;
+  btn_ver_mais.textContent = "Ver mais";
+  mostrarComentarios();
+}
+
+btn_ver_mais.addEventListener("click", () => {
+  if (btn_ver_mais.textContent === "Fechar") {
+    resetar();
+  } else {
+    mostrarComentarios();
+  }
+});
+mostrarComentarios();
+
 // =================carrossel===========
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
