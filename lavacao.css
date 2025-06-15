@@ -528,6 +528,56 @@ footer abbr {
   flex-flow: column nowrap;
 }
 
+#cor_fundo {
+  padding: 100px 20px;
+}
+
+.container_logo h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #b30059;
+}
+
+.container_logo h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #8b0057;
+}
+
+.heart {
+  font-size: 3rem;
+  animation: pulse 1.5s infinite;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.mensagem {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff0f5;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+.assinatura {
+  margin-top: 40px;
+  font-style: italic;
+  color: #a0005d;
+}
+
 .icons {
   display: flex;
   flex-flow: row wrap;
