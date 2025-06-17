@@ -13,6 +13,7 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
 body {
   color: black;
   background: white;
@@ -150,9 +151,11 @@ body {
   bottom: 20px;
   cursor: pointer;
 }
+
 .float_zap a {
   color: white;
 }
+
 .float_zap:hover {
   background-color: #128c7e;
 }
@@ -162,7 +165,7 @@ body {
   max-width: 1200px;
   text-align: center;
   margin: 0 auto;
-  /* padding: 60px 20px; */
+  /* padding: 0px 10px; */
 }
 
 #servicos h2 {
@@ -230,9 +233,14 @@ body {
 }
 
 /* ================sobre nós e agenda======== */
+#agenda_sobre-nos {
+  padding: 10px;
+}
+
 #agenda_sobre-nos h2 {
   text-align: center;
 }
+
 .container-infor {
   display: grid;
   grid-template-columns: 1fr;
@@ -263,6 +271,7 @@ body {
   white-space: normal;
   overflow-wrap: break-word; */
 }
+
 .sobre-nos p {
   line-height: 1.6;
 }
@@ -447,26 +456,6 @@ body {
 .pessoa h3 {
   font-size: clamp(0.7rem, 1.5vw, 1.5rem);
 }
-
-/* =========botão ver mais========= */
-
-.btn_ver_mais {
-  background-color: #007bff;
-  color: white;
-  border-radius: var(--border-radius);
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.btn_ver_mais:hover {
-  background-color: #0056b3;
-}
-
-.ver_mais {
-  display: none;
-}
-
 /* ============final========= */
 footer {
   background-color: rgba(0, 0, 0, 0.897);
@@ -510,15 +499,6 @@ footer abbr {
   list-style: none;
 }
 
-.contatos,
-.pagamentos,
-.map {
-  display: flex;
-  flex-flow: column nowrap;
-  width: auto;
-  padding: 15px 7px;
-}
-
 .pagamentos .itens i {
   font-size: 1.6rem;
 }
@@ -526,6 +506,22 @@ footer abbr {
 .contatos .itens {
   display: flex;
   flex-flow: column nowrap;
+}
+
+#cor_fundo {
+  padding: 100px 20px;
+}
+
+.container_logo h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #b30059;
+}
+
+.container_logo h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #8b0057;
 }
 
 .icons {
@@ -558,6 +554,13 @@ iframe {
 @media (min-width: 300px) {
   #final {
     display: flex;
+  }
+  #agenda_sobre-nos {
+    padding: 0px;
+  }
+
+  #servicos {
+    padding: 0px 10px;
   }
 }
 /* =========home========= */
