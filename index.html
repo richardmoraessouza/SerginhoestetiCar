@@ -10,6 +10,8 @@
     <meta property="og:image" content="https://www.serginhoesteticar.com.br/imagens/logo-serginho.png" />
     <meta property="og:url" content="https://www.serginhoesteticar.com.br" />
     <meta property="og:type" content="website" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Serginho EstetiCar</title>
     <link rel="stylesheet" href="lavacao.css" />
     <link
@@ -30,16 +32,17 @@
     </div>
     <header id="home">
       <section id="cor_fundo">
-         <section id="cor_fundo">
-    <div class="container_logo">
-      <h1>Guilherme, fica comigo por favor <span class="heart">💖</span></h1>
-      <h2>Feliz Dia dos Namorados!</h2>
-    </div>
-    <div class="assinatura">
-      Com todo meu amor,<br>
-      [P.Diddy] 💕
-    </div>
-  </section>
+        <div class="container_logo">
+          <img src="imagens/logo SerginhoEstetiCar.png" alt="Logo Serginho EstetiCar" class="logo-animada"/>
+          <h1>Lavação - Higienização - polimento</h1>
+          <a href="https://wa.me/5547996533013?text=Olá%2C%20quero%20agendar%20um%20horário%20para%20lavar%20meu%20carro!" target="_blank"
+          ><button class="btn_whatsapp">Agende seu horário</button></a
+          >
+          <p class="whatsapp">
+            <i class="bi-whatsapp"></i> (47) 99653-3013
+          </p>
+        </div>
+      </section>
     </header>
     
     <main id="principal">
@@ -179,7 +182,8 @@
         <h2><i class="fas fa-comment-dots"></i> avaliações dos clientes</h2>
         <div class="container-avaliacoes scroll-reveal">
         </div>
-        <button class="btn_ver_mais" onclick="mostrarMais()">Ver mais</button>
+        <button class="btn btn-primary btn_ver_mais" onclick="mostrarMais()">Ver mais</button>
+       
       </section>
     </main>
 
@@ -190,7 +194,7 @@
           <section class="map">
             <h2><i class="fas fa-sitemap"></i> Site Map</h2>
             <div class="itens">
-              <ul>
+              <ul class="ps-0" >
                 <li>
                   <a href="#home">Home</a>
                 </li>
@@ -214,7 +218,7 @@
             <h2><i class="fas fa-credit-card"></i> Formas de pagamento</h2>
             <div class="itens">
               <div class="icons">
-                <ul>
+                <ul class="ps-0">
                   <li><i class="fa fa-credit-card" ;"></i> Crédito</li>
                   <li><i class="fa fa-credit-card";"></i> Débito</li>
                   <li><i class="fa-brands fa-pix" ;"></i> PIX</li>
@@ -226,30 +230,31 @@
           <section class="contatos">
             <h2><i class="fas fa-phone-alt"></i> Contatos</h2>
             <div class="itens">
+              
               <a href="https://wa.me/5547996533013?text=Olá%2C%20quero%20agendar%20um%20horário%20para%20lavar%20meu%20carro!" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp icone"></i>
+                <i class="bi-whatsapp"></i>
                   4799653-3013
               </a>
               <a href="https://www.instagram.com/serginhoesteticar/" target="_blank" rel="noopener noreferrer">
-                  <i class="fab fa-instagram icone"></i>
+                  <i class="bi-instagram"></i>
                   @serginhoesteticar
               </a>
              <a href="http://m.facebook.com/serginhoesteticar/" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-facebook-f icone"></i> Serginho LavaCar
+                <i class="bi-facebook"></i> Serginho LavaCar
              </a>
 
              <a href="mailto:serginhoesteticar@gmail.com" target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-envelope icone"></i> serginhoesteticar@gmail.com
+              <i class="bi-envelope"></i> serginhoesteticar@gmail.com
              </a>
 
 
 
               <a href="https://www.google.com/maps/place/S%C3%A9rginho+Est%C3%A9tiCar+-+Limpeza+Geral+do+seu+ve%C3%ADculo!/@-26.9420466,-48.7299742,905m/data=!3m1!1e3!4m6!3m5!1s0x94df355b20d0b1c9:0x6f031cdbb2ad5141!8m2!3d-26.9420651!4d-48.7283245!16s%2Fg%2F11h240zdh9?entry=ttu&g_ep=EgoyMDI1MDYwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-map-marker-alt icone"></i>
+                <i class="bi-geo-alt-fill"></i>
                 R. Antenor Antônio Viêira - 88 - Itaipava
               </a>
               <p>
-                <i class="fas fa-clock icone"></i>
+                <i class="bi-clock-fill"></i>
                 Seg - Dom: 07:00 - 1200 | 13:30 - 19:00
               </p>
             </div>
