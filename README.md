@@ -32,7 +32,7 @@ Criar um site limpo, informativo e otimizado para dispositivos móveis que:
 
 ## 🔗 Link do Site
 
-👉 [https://meusite.com](https://richardmoraessouza.github.io/SerginhoEstetiCar/)
+👉 [https://meusite.com](https://richardmoraessouza.github.io/SerginhoestetiCar/)
 
 ## 📞 Contato
 
