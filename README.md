@@ -41,4 +41,3 @@ Este site foi feito para uso comercial por um cliente real. Para fins de portfó
 **Richard Moraes Souza**  
 [GitHub](https://github.com/richardmoraessouza)  
 [LinkedIn](https://www.linkedin.com/in/richard/)
-s
