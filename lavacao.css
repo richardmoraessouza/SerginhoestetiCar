@@ -165,7 +165,6 @@ body {
   max-width: 1200px;
   text-align: center;
   margin: 0 auto;
-  /* padding: 0px 10px; */
 }
 
 #servicos h2 {
@@ -248,6 +247,7 @@ body {
   width: 100%;
   max-width: 1200px;
   text-align: center;
+  padding: 10px;
 }
 
 .mover-bloco {
