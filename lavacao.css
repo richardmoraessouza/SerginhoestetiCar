@@ -332,6 +332,8 @@ body {
   width: 100%;
   border-radius: 8px;
   display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-btn {
@@ -383,7 +385,7 @@ body {
   transform: translate(-50%, -50%);
   width: 90%;
   height: 70%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .sair-model {
@@ -485,7 +487,7 @@ footer abbr {
 }
 
 .container_itens {
-  padding: 5px;
+  padding: 0px 10px;
 }
 
 #final a {
@@ -502,6 +504,7 @@ footer abbr {
 
 #final h2 {
   padding: 5px 0px;
+  margin-top: 15px;
 }
 
 #final li {
@@ -517,7 +520,9 @@ footer abbr {
   display: flex;
   flex-flow: column nowrap;
 }
-
+.contatos {
+  margin-bottom: 15px;
+}
 #cor_fundo {
   padding: 100px 20px;
 }
