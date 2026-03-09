@@ -1,289 +1,287 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta property="og:description" content="Lavagem, polimento e higienização com excelência. Agende seu horário!" />
-    <meta property="og:image" content="https://www.serginhoesteticar.com.br/imagens/logoSerginhoEstetiCar.png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Serginho EstetiCar - Especialistas em lavação automotiva, polimento e higienização de veículos em Itajaí. Atendimento com hora marcada.">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Serginho EstetiCar - Especialistas em lavação automotiva, polimento e higienização de veículos em Itajaí. Atendimento com hora marcada.">
+  <meta name="keywords" content="lavação automotiva Itajaí, estética automotiva Itajaí, polimento técnico Itajaí, higienização de carros Itajaí">
+  <meta property="og:title" content="Serginho EstetiCar - Estética Automotiva Premium" />
+  <meta property="og:description" content="Lavagem, polimento e higienização com excelência. Agende seu horário!" />
+  <meta property="og:image" content="https://www.serginhoesteticar.com.br/imagens/logoSerginhoEstetiCar.png" />
+  <meta property="og:url" content="https://www.serginhoesteticar.com.br" />
+  <meta property="og:type" content="website" />
 
-  <meta name="keywords" content="lavação automotiva Itajaí, estética automotiva Itajaí, polimento técnico Itajaí, higienização de carros Itajaí, lavagem de carros, limpeza de carros em Itajaí">
+  <link rel="shortcut icon" href="imagens/logoSerginhoEstetiCar.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lavacao.css" />
+  <title>Serginho EstetiCar</title>
+</head>
+<body>
 
-    <meta property="og:title" content="Serginho EstetiCar - Estética Automotiva em Itaipava" />
-    <meta property="og:url" content="https://www.serginhoesteticar.com.br" />
-    <meta property="og:type" content="website" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="lavacao.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- ===== MODAL IMAGEM ===== -->
+  <div class="focarImg" id="modal">
+    <button class="sair-model" aria-label="Fechar"><i class="fas fa-times"></i></button>
+    <img src="" alt="" id="model_img" />
+  </div>
 
-    <link rel="shortcut icon" href="imagens/logoSerginhoEstetiCar.png" type="image/x-icon">
+  <!-- ===== HEADER / HERO ===== -->
+  <header id="home">
+    <nav class="navbar">
+      <img src="imagens/logoSerginhoEstetiCar.png" alt="Logo Serginho EstetiCar" class="nav-logo" />
+      <ul class="nav-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+      </ul>
+      <a href="https://wa.me/5547996533013?text=Olá%2C%20quero%20agendar%20um%20horário%20para%20lavar%20meu%20carro!" target="_blank" class="nav-cta">
+        <i class="bi-whatsapp"></i> Agendar
+      </a>
+    </nav>
 
-    <title>Serginho EstetiCar</title>
-
-  </head>
-  <body>
-    <div class="focarImg">
-      <button class="sair-model" aria-label="Fechar">
-        <i class="fas fa-times"></i>
-      </button>
-      <img src="" alt="Carro finalizado 1" id="model_img"/>
-    </div>
-    <header id="home">
-      <section id="cor_fundo">
-        <div class="container_logo">
-          <img src="imagens/logoSerginhoEstetiCar.png" alt="Logo Serginho EstetiCar" class="logo-animada"/>
-          <h1>Lavação - Higienização - polimento</h1>
-          <a href="https://wa.me/5547996533013?text=Olá%2C%20quero%20agendar%20um%20horário%20para%20lavar%20meu%20carro!" target="_blank"
-          ><button class="btn_whatsapp">Agende seu horário</button></a
-          >
-          <p class="whatsapp">
-            <i class="bi-whatsapp"></i> (47) 99653-3013
-          </p>
-        </div>
-      </section>
-    </header>
-    
-    <main id="principal">
-
-      <div class="float_zap">
-        <a href="https://wa.me/5547996533013?text=Olá%2C%20quero%20agendar%20um%20horário%20para%20lavar%20meu%20carro!" target="_blank">
-          <i class="fab fa-whatsapp icone"></i>
+    <div class="hero-content">
+      <div class="hero-tag">Estética Automotiva · Itajaí</div>
+      <h1 class="hero-title">
+        Seu carro<br/>
+        <span class="highlight">merece</span><br/>
+        o melhor.
+      </h1>
+      <p class="hero-sub">Lavação completa, polimento técnico e higienização profissional. Cada detalhe tratado com excelência.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5547996533013?text=Olá%2C%20quero%20agendar%20um%20horário%20para%20lavar%20meu%20carro!" target="_blank" class="btn-primary">
+          <i class="bi-whatsapp"></i> Agendar Horário
         </a>
+        <a href="#servicos" class="btn-ghost">Ver Serviços</a>
       </div>
-      <section id="servicos">
-        <h2><i class="fas fa-tools"></i>Serviços</h2>
-        <div class="container-servicos">
-          <article class="card-servico scroll-reveal">
-            <i class="fas fa-car-side icone-servico"></i>
-            <h3>Lavação Completa</h3>
-            <p>
-              Lavagem externa e interna com produtos de qualidade e acabamento
-              premium.
-            </p>
-          </article>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Clientes Atendidos</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">5★</span><span class="stat-label">Avaliação Média</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Satisfação</span></div>
+      </div>
+    </div>
 
-          <article class="card-servico scroll-reveal">
-            <i class="fas fa-star icone-servico"></i>
-            <h3>Polimento Técnico</h3>
-            <p>
-              Realce do brilho original da pintura e remoção de pequenos riscos.
-            </p>
-          </article>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
 
-          <article class="card-servico scroll-reveal">
-           <i class="fas fa-couch icone-servico"></i>
-            <h3>Hidratação de Bancos de Couro</h3>
-            <p>
-              Tratamento especial que nutre e protege os bancos de couro, evitando ressecamento, rachaduras e perda de brilho.
-            </p>
-          </article>
+  <!-- ===== FLOAT WHATSAPP ===== -->
+  <div class="float_zap">
+    <a href="https://wa.me/5547996533013?text=Olá%2C%20quero%20agendar%20um%20horário%20para%20lavar%20meu%20carro!" target="_blank" aria-label="Falar no WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
 
-          <article class="card-servico scroll-reveal">
-            <i class="fas fa-shield-alt icone-servico"></i>
-            <h3>Vitricação de pintura</h3>
-            <p>
-               Proteção avançada que sela a pintura com uma camada vitrificada,
-               repelindo sujeiras, raios UV, chuva ácida e pequenos riscos. Deixa o
-               carro com brilho intenso por muito mais tempo.
-            </p>
-          </article>
+  <main>
 
-          <article class="card-servico scroll-reveal">
-            <i class="fas fa-spray-can icone-servico"></i>
-            <h3>Higienização Interna Completa</h3>
-            <p>
-              Limpeza profunda de bancos, carpetes, teto e ar-condicionado, removendo
-              odores, ácaros e bactérias. Ideal para quem busca conforto e saúde.
-            </p>
-          </article>
+    <!-- ===== SERVIÇOS ===== -->
+    <section id="servicos">
+      <div class="section-header">
+        <div class="section-tag">O que fazemos</div>
+        <h2>Serviços <span class="highlight">Especializados</span></h2>
+        <p class="section-sub">Tratamento profissional para cada necessidade do seu veículo.</p>
+      </div>
 
-          <article class="card-servico scroll-reveal">
-            <i class="fas fa-solar-panel icone-servico"></i>
-            <h3>Revitalização de Plásticos</h3>
-            <p>
-              Tratamento que restaura a cor e o brilho original de plásticos internos e externos, protegendo contra o ressecamento e os raios UV.
-            </p>
-          </article>
+      <div class="grid-servicos">
 
-          <article class="card-servico scroll-reveal">
-           <i class="fas fa-dot-circle icone-servico"></i>
-            <h3>Aplicação de Pretinho nos Pneus</h3>
-            <p>
-             Finalização com produto que realça o brilho dos pneus, protege contra rachaduras e ressecamento, e dá ao veículo um aspecto renovado e bem cuidado.
-            </p>
-          </article>
+        <article class="card-servico scroll-reveal">
+          <div class="card-icon"><i class="fas fa-car-side"></i></div>
+          <h3>Lavação Completa</h3>
+          <p>Lavagem externa e interna com produtos premium e acabamento de excelência.</p>
+        </article>
 
-          <article class="card-servico scroll-reveal">
-            <i class="fas fa-glass-whiskey icone-servico"></i>
-            <h3>Cristalização de Vidros</h3>
-            <p>
-              Tratamento repelente de água que melhora a visibilidade em dias de chuva
-              e facilita a limpeza dos vidros.
-            </p>
-          </article>
+        <article class="card-servico scroll-reveal">
+          <div class="card-icon"><i class="fas fa-star"></i></div>
+          <h3>Polimento Técnico</h3>
+          <p>Realce do brilho original da pintura e remoção de pequenos riscos com técnica profissional.</p>
+        </article>
+
+        <article class="card-servico scroll-reveal">
+          <div class="card-icon"><i class="fas fa-couch"></i></div>
+          <h3>Hidratação de Couro</h3>
+          <p>Tratamento que nutre e protege os bancos, evitando ressecamento e rachaduras.</p>
+        </article>
+
+        <article class="card-servico scroll-reveal">
+          <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Vitrificação de Pintura</h3>
+          <p>Camada vitrificada que repele sujeira, raios UV e chuva ácida. Brilho duradouro.</p>
+        </article>
+
+        <article class="card-servico scroll-reveal">
+          <div class="card-icon"><i class="fas fa-spray-can"></i></div>
+          <h3>Higienização Interna</h3>
+          <p>Limpeza profunda de bancos, carpetes, teto e ar-condicionado. Remove odores e bactérias.</p>
+        </article>
+
+        <article class="card-servico scroll-reveal">
+          <div class="card-icon"><i class="fas fa-solar-panel"></i></div>
+          <h3>Revitalização de Plásticos</h3>
+          <p>Restaura cor e brilho dos plásticos internos e externos, protegendo contra UV.</p>
+        </article>
+
+        <article class="card-servico scroll-reveal">
+          <div class="card-icon"><i class="fas fa-dot-circle"></i></div>
+          <h3>Pretinho nos Pneus</h3>
+          <p>Realça o brilho dos pneus e protege contra rachaduras — visual renovado.</p>
+        </article>
+
+        <article class="card-servico scroll-reveal">
+          <div class="card-icon"><i class="fas fa-glass-whiskey"></i></div>
+          <h3>Cristalização de Vidros</h3>
+          <p>Tratamento repelente de água que melhora a visibilidade em dias de chuva.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== SOBRE + HORÁRIOS ===== -->
+    <section id="sobre">
+      <div class="sobre-wrapper">
+
+        <div class="sobre-texto scroll-reveal">
+          <div class="section-tag">Nossa história</div>
+          <h2>Paixão por<br/><span class="highlight">cada detalhe</span></h2>
+          <p>Na <strong>Serginho EstetiCar</strong>, mais do que cuidar de carros, nós cuidamos de histórias. Sabemos que cada veículo carrega momentos, conquistas e memórias — por isso, nosso compromisso vai além da limpeza.</p>
+          <p>Fundada com paixão por automóveis, nossa empresa surgiu para transformar a experiência de quem valoriza seu carro. Atendimento personalizado, produtos de qualidade e uma equipe dedicada que trata cada veículo como único.</p>
+          <a href="https://wa.me/5547996533013?text=Olá%2C%20quero%20agendar%20um%20horário%20para%20lavar%20meu%20carro!" target="_blank" class="btn-primary">
+            <i class="bi-whatsapp"></i> Falar Conosco
+          </a>
         </div>
-      </section>
-<!-- ==================agenda e sobre nós============= -->
-      <section id="agenda_sobre-nos">
-        <h2 class="titulo-central"><i class="fas fa-users"></i> Agenda e Sobre Nós</h2>
-        <div class="container-infor">
-          <div class="sobre-nos mover-bloco scroll-reveal">
-            <h3><i class="fas fa-info-circle"></i> Sobre nós</h3>
-            <p>
-              Na <strong>Serginho EstetiCar</strong>, mais do que cuidar de
-              carros, nós cuidamos de histórias. Sabemos que cada veículo carrega
-              momentos, conquistas e memórias — por isso, nosso compromisso vai
-              além da limpeza: é entregar cuidado, respeito e excelência em cada
-              detalhe.
-            </p>
-            <p>
-              Fundada com paixão por automóveis e movida pelo desejo de oferecer
-              um serviço diferenciado, nossa empresa surgiu para transformar a
-              experiência de quem valoriza seu carro. Aqui, você encontra
-              atendimento personalizado, produtos de qualidade e uma equipe
-              dedicada que trata cada veículo como se fosse único — porque ele é.
-            </p>
-            <p>
-              Seja para uma lavagem completa, polimento técnico ou higienização
-              interna, nossa missão é simples: fazer com que você se sinta
-              orgulhoso ao ver seu carro brilhar.
-            </p>
-          </div>
-          <div class="agenda mover-bloco scroll-reveal">
-            <h3><i class="fas fa-calendar-alt"></i> Horário de Atendimento</h3>
-            <ul class="horarios">
-              <li><strong>Seg. a Dom.</strong></li>
-              <li>07:00 - 12:00</li>
-              <li>13:30 - 19:00</li>
-            </ul>
-            <p class="agendamento">Atendimento somente com horário marcado</p>
-          </div>
-      </section>
-          
-      <section id="carros-finalizados">
-          <h2><i class="fas fa-car"></i> Carros Finalizados</h2>
-           <div class="carousel scroll-reveal">
-             <button class="carousel-btn prev" aria-label="Slide anterior">&#10094;</button>
 
-           <div class="carousel-track-container">
-            <ul class="carousel-track">
-              <li class="carousel-slide"><img src="imagens/1000034645.jpg" alt="Carro finalizado 1" id="teste"/></li>
-              <li class="carousel-slide"><img src="imagens/1000034661.jpg" alt="Carro finalizado 2" /></li>
-              <li class="carousel-slide"><img src="imagens/1000034663.jpg" alt="Carro finalizado 3" /></li>
-              <li class="carousel-slide"><img src="imagens/1000034664.jpg" alt="Carro finalizado 4" /></li>
-              <li class="carousel-slide"><img src="imagens/1000034665.jpg" alt="Carro finalizado 5" /></li>
-              <li class="carousel-slide"><img src="imagens/1000034667.jpg" alt="Carro finalizado 6" /></li>
-            </ul>
-           </div>
-
-           <button class="carousel-btn next" aria-label="Próximo slide">&#10095;</button>
-      </section>
-      <!-- =====================valiações================ -->
-      <section id="avaliacoes">
-        <h2><i class="fas fa-comment-dots"></i> avaliações dos clientes</h2>
-        <div class="container-avaliacoes scroll-reveal">
-        </div>
-        <button class="btn_ver_mais">Ver mais</button>
-        <!-- <button class="btn_ver_mais" onclick="mostrarMais()">Ver mais</button> -->
-       
-        
-      </section>
-    </main>
-
-    <!-- =============final============== -->
-    <footer>
-      <section id="final">
-        <div class="container_itens ps-2">
-          <section class="map">
-            <h2><i class="fas fa-sitemap"></i> Site Map</h2>
-            <div class="itens">
-              <ul class="ps-0" >
-                <li>
-                  <a href="#home">Home</a>
-                </li>
-                <li>
-                  <a href="#servicos">Serviços</a>
-                </li>
-                <li>
-                  <a href="#agenda_sobre-nos">Sobre nós</a>
-                </li>
-                <li>
-                  <a href="#carros-finalizados">Carros Finalizados</a>
-                </li>
-                <li>
-                  <a href="#avaliacoes">Avaliações</a>
-                </li>
-              </ul>
+        <div class="sobre-horario scroll-reveal">
+          <div class="horario-card">
+            <div class="horario-header">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Horário de Atendimento</span>
             </div>
-          </section>
-
-          <section class="pagamentos">
-            <h2><i class="fas fa-credit-card"></i> Formas de pagamento</h2>
-            <div class="itens">
-              <div class="icons">
-                <ul class="ps-0">
-                  <li><i class="fa fa-credit-card" ;"></i> Crédito</li>
-                  <li><i class="fa fa-credit-card";"></i> Débito</li>
-                  <li><i class="fa-brands fa-pix" ;"></i> PIX</li>
-                </ul>
+            <div class="horario-dias">
+              <div class="dia-row">
+                <span class="dia">Segunda — Domingo</span>
+              </div>
+              <div class="horario-turno">
+                <div class="turno">
+                  <span class="turno-label">Manhã</span>
+                  <span class="turno-hora">07:00 – 12:00</span>
+                </div>
+                <div class="turno-sep"></div>
+                <div class="turno">
+                  <span class="turno-label">Tarde</span>
+                  <span class="turno-hora">13:30 – 19:00</span>
+                </div>
               </div>
             </div>
-          </section>
-
-          <section class="contatos">
-            <h2><i class="fas fa-phone-alt"></i> Contatos</h2>
-            <div class="itens">
-              
-              <a href="https://wa.me/5547996533013?text=Olá%2C%20quero%20agendar%20um%20horário%20para%20lavar%20meu%20carro!" target="_blank" rel="noopener noreferrer">
-                <i class="bi-whatsapp"></i>
-                  4799653-3013
-              </a>
-              <a href="https://www.instagram.com/serginhoesteticar/" target="_blank" rel="noopener noreferrer">
-                  <i class="bi-instagram"></i>
-                  @serginhoesteticar
-              </a>
-             <a href="http://m.facebook.com/serginhoesteticar/" target="_blank" rel="noopener noreferrer">
-                <i class="bi-facebook"></i> Serginho LavaCar
-             </a>
-
-             <a href="mailto:serginhoesteticar@gmail.com" target="_blank" rel="noopener noreferrer">
-              <i class="bi-envelope"></i> serginhoesteticar@gmail.com
-             </a>
-
-
-
-              <a href="https://www.google.com/maps/place/S%C3%A9rginho+Est%C3%A9tiCar+-+Limpeza+Geral+do+seu+ve%C3%ADculo!/@-26.9420466,-48.7299742,905m/data=!3m1!1e3!4m6!3m5!1s0x94df355b20d0b1c9:0x6f031cdbb2ad5141!8m2!3d-26.9420651!4d-48.7283245!16s%2Fg%2F11h240zdh9?entry=ttu&g_ep=EgoyMDI1MDYwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
-                <i class="bi-geo-alt-fill"></i>
-                R. Antenor Antônio Viêira - 88 - Itaipava
-              </a>
-              <p>
-                <i class="bi-clock-fill"></i>
-                Seg - Dom: 07:00 - 12:00 | 13:30 - 19:00
-              </p>
+            <div class="horario-aviso">
+              <i class="fas fa-info-circle"></i>
+              Atendimento somente com horário marcado
             </div>
-          </section>
-
-          <section class="localizacao">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.7838814874794!2d-48.730894062146604!3d-26.94206507672695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df355b20d0b1c9%3A0x6f031cdbb2ad5141!2sS%C3%A9rginho%20Est%C3%A9tiCar%20-%20Limpeza%20Geral%20do%20seu%20ve%C3%ADculo*21!5e0!3m2!1spt-BR!2sbr!4v1747878841753!5m2!1spt-BR!2sbr"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </section>
-
+            <a href="https://wa.me/5547996533013?text=Olá%2C%20quero%20agendar%20um%20horário%20para%20lavar%20meu%20carro!" target="_blank" class="btn-primary" style="width:100%;justify-content:center;margin-top:1.2rem;">
+              <i class="bi-whatsapp"></i> Agendar agora
+            </a>
+          </div>
         </div>
-        <p class="final p-1 m-0">"O senhor é meu pastor, nada me faltará"</p>
-      </section>
-    </footer>
-    <script src="lavacao.js"></script>
-  </body>
+
+      </div>
+    </section>
+
+    <!-- ===== GALERIA / CARROSSEL ===== -->
+    <section id="galeria">
+      <div class="section-header">
+        <div class="section-tag">Resultados reais</div>
+        <h2>Carros <span class="highlight">Finalizados</span></h2>
+        <p class="section-sub">Confira o resultado do nosso trabalho — cada carro entregue com orgulho.</p>
+      </div>
+
+      <div class="carousel scroll-reveal">
+        <button class="carousel-btn prev" aria-label="Slide anterior"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-track-container">
+          <ul class="carousel-track">
+            <li class="carousel-slide"><img src="imagens/1000034645.jpg" alt="Carro finalizado 1" /></li>
+            <li class="carousel-slide"><img src="imagens/1000034661.jpg" alt="Carro finalizado 2" /></li>
+            <li class="carousel-slide"><img src="imagens/1000034663.jpg" alt="Carro finalizado 3" /></li>
+            <li class="carousel-slide"><img src="imagens/1000034664.jpg" alt="Carro finalizado 4" /></li>
+            <li class="carousel-slide"><img src="imagens/1000034665.jpg" alt="Carro finalizado 5" /></li>
+            <li class="carousel-slide"><img src="imagens/1000034667.jpg" alt="Carro finalizado 6" /></li>
+          </ul>
+        </div>
+        <button class="carousel-btn next" aria-label="Próximo slide"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <!-- ===== AVALIAÇÕES ===== -->
+    <section id="avaliacoes">
+      <div class="section-header">
+        <div class="section-tag">O que dizem</div>
+        <h2>Avaliações dos <span class="highlight">Clientes</span></h2>
+      </div>
+      <div class="container-avaliacoes"></div>
+      <button class="btn-ver-mais">Ver mais avaliações</button>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="imagens/logoSerginhoEstetiCar.png" alt="Logo" class="footer-logo" />
+        <p>Estética automotiva profissional em Itaipava, Itajaí. Cuidando do seu carro como ele merece.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/serginhoesteticar/" target="_blank" aria-label="Instagram"><i class="bi-instagram"></i></a>
+          <a href="http://m.facebook.com/serginhoesteticar/" target="_blank" aria-label="Facebook"><i class="bi-facebook"></i></a>
+          <a href="https://wa.me/5547996533013" target="_blank" aria-label="WhatsApp"><i class="bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5547996533013" target="_blank"><i class="bi-whatsapp"></i> (47) 99653-3013</a></li>
+          <li><a href="mailto:serginhoesteticar@gmail.com"><i class="bi-envelope"></i> serginhoesteticar@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/serginhoesteticar/" target="_blank"><i class="bi-instagram"></i> @serginhoesteticar</a></li>
+        </ul>
+        <h4 style="margin-top:1.5rem;">Pagamento</h4>
+        <ul class="pagamento-icons">
+          <li><i class="fa fa-credit-card"></i> Crédito / Débito</li>
+          <li><i class="fa-brands fa-pix"></i> PIX</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-mapa">
+        <h4><i class="bi-geo-alt-fill"></i> Localização</h4>
+        <p>R. Antenor Antônio Viêira, 88 — Itaipava, Itajaí</p>
+        <p><i class="bi-clock-fill"></i> Seg–Dom: 07:00–12:00 | 13:30–19:00</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.7838814874794!2d-48.730894062146604!3d-26.94206507672695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df355b20d0b1c9%3A0x6f031cdbb2ad5141!2sS%C3%A9rginho%20Est%C3%A9tiCar%20-%20Limpeza%20Geral%20do%20seu%20ve%C3%ADculo*21!5e0!3m2!1spt-BR!2sbr!4v1747878841753!5m2!1spt-BR!2sbr"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Serginho EstetiCar">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-verse">"O Senhor é meu pastor, nada me faltará" — Sl 23:1</p>
+      <p class="footer-copy">© 2025 Serginho EstetiCar. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="lavacao.js"></script>
+</body>
 </html>
